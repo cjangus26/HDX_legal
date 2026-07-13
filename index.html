@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HDX Inspect — Privacy Policy</title>
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Privacy policy for the HDX Inspect machinery inspection app.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1d21;
+      --muted: #5c636b;
+      --accent: #1257b0;
+      --rule: #e6e8eb;
+      --card: #f6f7f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14171a;
+        --fg: #e7eaed;
+        --muted: #a2a9b0;
+        --accent: #6ea8fe;
+        --rule: #2a2f35;
+        --card: #1c2126;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 22px 80px;
+    }
+    header { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+    h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+    .updated { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 38px 0 12px;
+      padding-top: 6px;
+      letter-spacing: -0.01em;
+    }
+    p { margin: 0 0 16px; }
+    ul, ol { margin: 0 0 16px; padding-left: 1.35em; }
+    li { margin: 0 0 9px; }
+    a { color: var(--accent); }
+    strong { font-weight: 650; }
+    .lead {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 18px 20px 4px;
+      margin-bottom: 8px;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    code {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: 0.05em 0.35em;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>HDX Inspect — Privacy Policy</h1>
+      <p class="updated">Last updated: 13 July 2026</p>
+    </header>
+
+    <h2>Who we are</h2>
+    <p>HDX Inspect (“the app”) is published by <strong>Cameron Angus</strong>, an
+      individual developer (sole trader). In this policy, “we”, “us” and “our”
+      refer to Cameron Angus.</p>
+    <p>Contact for any privacy question:
+      <strong><a href="mailto:cameronjohnangus@hotmail.co.uk">cameronjohnangus@hotmail.co.uk</a></strong>.</p>
+    <p>HDX Inspect is a machinery inspection, sign-off, scheduling and reporting
+      tool for professional use by inspection organisations and their staff.</p>
+
+    <h2>The short version</h2>
+    <div class="lead">
+      <ul>
+        <li><strong>We operate no servers and collect no data.</strong> The app
+          has no backend run by us. We receive no analytics, no crash reports,
+          no telemetry, no personal data, and no usage data from the app.</li>
+        <li><strong>Your data stays under your organisation's control.</strong>
+          Everything the app records is stored (1) on the device, in a local
+          database encrypted at rest, and (2) if your organisation enables sync,
+          in your organisation's <strong>own Google Drive</strong> storage — an
+          account we have no access to.</li>
+        <li><strong>No tracking, no advertising, no third-party analytics.</strong>
+          The app contains no advertising or analytics SDKs and does not track
+          you across apps or websites.</li>
+      </ul>
+    </div>
+
+    <h2>Data the app stores on your behalf</h2>
+    <p>The app records the data your organisation enters while performing
+      machinery inspections:</p>
+    <ul>
+      <li><strong>User accounts</strong> — name, username, role (administrator
+        or inspector), and a password hash (passwords are hashed with Argon2id;
+        the app never stores your password in plain text).</li>
+      <li><strong>Inspection records</strong> — customers, machines, checklists,
+        inspection results, defects, notes, bookings and schedules.</li>
+      <li><strong>Photos</strong> — pictures you attach to inspection records,
+        taken with the camera or chosen from your photo library. The app only
+        accesses the camera or photo library when you choose to add a photo.</li>
+      <li><strong>Signatures</strong> — sign-off signatures drawn on the device
+        by the inspector and the customer representative.</li>
+      <li><strong>Certificates and reports</strong> — PDF documents the app
+        generates from inspection records.</li>
+      <li><strong>Activity log</strong> — a record of significant actions in the
+        app (for example who finalised or voided a certificate), kept for
+        accountability within your organisation.</li>
+    </ul>
+    <p>This data is processed for one purpose: performing and documenting
+      machinery inspections for your organisation. It is not used for profiling,
+      marketing, or any secondary purpose, and it is never sold or shared by
+      us — we never possess it.</p>
+
+    <h2>Where the data lives</h2>
+    <ol>
+      <li><strong>On the device.</strong> Data is stored in a local database
+        encrypted at rest (SQLCipher/AES). The encryption key is held in the
+        operating system's secure storage (iOS Keychain). Deleting the app
+        deletes this local data; the app also provides an administrator-gated
+        “wipe this device” function.</li>
+      <li><strong>In your organisation's Google Drive (optional, “connected
+        mode”).</strong> If your organisation connects a Google account, the app
+        synchronises the dataset, photos, signatures and certificate PDFs to a
+        folder structure in that Google Drive. The app requests only the narrow
+        <code>drive.file</code> permission (access to files and folders the app
+        itself created — not your whole Drive). Google's processing of data
+        stored in Google Drive is governed by Google's own terms and privacy
+        policy. Who can reach that Drive folder is controlled by your
+        organisation's Google account and sharing settings — this is the real
+        data-access boundary.</li>
+    </ol>
+    <p>We — the app publisher — cannot see, access, or recover any of this data.</p>
+
+    <h2>Data shared with third parties</h2>
+    <ul>
+      <li><strong>Google (only in connected mode):</strong> signing in with
+        Google and storing your organisation's data in its own Google Drive, as
+        described above. See
+        <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google's Privacy Policy</a>.</li>
+      <li><strong>No one else.</strong> There are no other third-party services,
+        SDKs, analytics providers, or advertisers.</li>
+    </ul>
+
+    <h2>Permissions the app requests</h2>
+    <ul>
+      <li><strong>Camera</strong> — only to take photos you attach to inspection
+        records.</li>
+      <li><strong>Photo library</strong> — only to pick existing photos you
+        attach to inspection records.</li>
+    </ul>
+    <p>Both are optional; the app functions without them if you never attach
+      photos.</p>
+
+    <h2>Retention and deletion</h2>
+    <ul>
+      <li>Data retention is controlled by your organisation's administrator. The
+        app includes an administrator-configurable retention period after which
+        old records are purged, and administrators can deactivate or delete user
+        accounts. A signed-in user can also delete their own account from within
+        the app (Settings → Delete my account).</li>
+      <li>To have your personal data corrected or deleted, contact <strong>your
+        organisation's administrator</strong> — under data-protection law (e.g.
+        the GDPR), your organisation is the data controller for inspection data;
+        we are not a processor of it because we never receive it.</li>
+      <li>Deleting the app removes the local database. Data your organisation
+        synced to its own Google Drive is under the organisation's control and
+        can be deleted there.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>HDX Inspect is a professional business tool and is not directed at
+      children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If we change this policy we will update this page and the “last updated”
+      date. Material changes will be noted in the app's release notes.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy:
+      <strong><a href="mailto:cameronjohnangus@hotmail.co.uk">cameronjohnangus@hotmail.co.uk</a></strong>.</p>
+    <p>If you are in the UK or EU you also have the right to lodge a complaint
+      with your data-protection supervisory authority. Because the app's
+      publisher holds no user data, most requests (access, correction, deletion)
+      are best directed to your own organisation's administrator — the
+      controller of the inspection data — or to the email above.</p>
+
+    <footer>
+      HDX Inspect — Privacy Policy · Published by Cameron Angus (sole trader).
+    </footer>
+  </main>
+</body>
+</html>
