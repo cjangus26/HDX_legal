@@ -79,7 +79,7 @@
   <main>
     <header>
       <h1>HDX Inspect — Privacy Policy</h1>
-      <p class="updated">Last updated: 13 July 2026</p>
+      <p class="updated">Last updated: 25 October 2026</p>
     </header>
 
     <h2>Who we are</h2>
@@ -140,6 +140,17 @@
         operating system's secure storage (iOS Keychain). Deleting the app
         deletes this local data; the app also provides an administrator-gated
         “wipe this device” function.</li>
+      <li><strong>Sign-in convenience on the device (optional).</strong> If you
+        turn on “remember me”, the app keeps a sign-in credential for your app
+        account in the operating system's secure storage on that device only,
+        protected either by the device's biometric unlock (Face ID, Touch ID or
+        fingerprint) or by a device PIN you choose. The biometric check is
+        performed entirely by the operating system: the app never receives,
+        stores or transmits any biometric data (no face or fingerprint
+        templates) — it only learns whether the system prompt succeeded. A
+        device PIN is stored only as a salted hash on the device. Turning the
+        option off, signing out, or wiping the device removes the stored
+        credential.</li>
       <li><strong>In your organisation's Google Drive (optional, “connected
         mode”).</strong> If your organisation connects a Google account, the app
         synchronises the dataset, photos, signatures and certificate PDFs to a
@@ -169,9 +180,14 @@
         records.</li>
       <li><strong>Photo library</strong> — only to pick existing photos you
         attach to inspection records.</li>
+      <li><strong>Face ID / Touch ID (biometric unlock)</strong> — only if you
+        turn on biometric “remember me”, to let the operating system confirm it
+        is you before the app uses the sign-in credential it stored on the
+        device (see “Where the data lives”). No biometric data reaches the
+        app.</li>
     </ul>
-    <p>Both are optional; the app functions without them if you never attach
-      photos.</p>
+    <p>All of these are optional; the app functions without them if you never
+      attach photos and sign in with your password instead.</p>
 
     <h2>Retention and deletion</h2>
     <ul>
