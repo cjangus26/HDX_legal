@@ -23,22 +23,12 @@ first-run screen.
 
 ## The user manual is generated, do not edit it here
 
-`manual/index.html` and the PDF are **generated** in the app repository
-(`cjangus26/HDX_Inspect_V4`) by `docs/manual/build_user_manual.py` and copied
-here. Edit the generator there, then copy the two outputs:
-
-```sh
-# in HDX_Inspect_V4
-python docs/manual/build_user_manual.py \
-  docs/HDX_Inspect_User_Manual.pdf docs/HDX_Inspect_User_Manual.html
-cp docs/HDX_Inspect_User_Manual.html ../HDX_legal/manual/index.html
-cp docs/HDX_Inspect_User_Manual.pdf  ../HDX_legal/manual/HDX_Inspect_User_Manual.pdf
-```
+`manual/index.html` and the PDF are generated from the app's sources and copied
+here. Do not edit them by hand: changes are made in the generator and the two
+files are replaced together.
 
 The app opens the manual at **section anchors** (for example
 `manual/#navigation` from the welcome tour, `manual/#reports` from the Reports
-screen's help button). The anchors are stable names set in the generator; a
-test in the app repository (`test/core/manual_links_test.dart`) checks that
-every anchor the app uses exists in the generated page. Publish a regenerated
-manual here **before or together with** the app release that links to new
-anchors, otherwise those links land at the top of the page.
+screen's help button). Publish a regenerated manual here **before or together
+with** the app release that links to new anchors, otherwise those links land at
+the top of the page.
